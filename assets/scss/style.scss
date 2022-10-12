@@ -1,0 +1,383 @@
+@import 'nullstyle.scss';//обнуляющие стили
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');//шрифт
+
+
+.wrapper {//-----------------оболочка-----------------//
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    min-height: 100%;
+    .mainblock {
+        height: 100vh;
+        padding: 30px 30px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .mainblock_item {
+            &.slider {//------------блок-слайдер-----------------//
+                width: 460px;
+                height: 492px;
+                display: flex;
+                position: relative;
+                .slider_secondary {//боковые фотографии
+                    &.secondary{
+                        .secondary_elem{
+                                cursor: pointer;
+                                width: 90px;
+                                height: 130px;
+                                background-size: contain;
+                                margin-top: 30px; 
+                                &:first-child{
+                                    margin-top: 0px;
+                                }                           
+                        }
+                    }
+                }
+                .slider_main {//основная фотография
+                    width: 340px;
+                    height: 492px;
+                    background-size: contain;
+                    margin-left: 30px;
+                    cursor: pointer;
+                }
+
+                .slider_control{
+                    margin-top: 29px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 24px;
+                    width: 42px;
+                    height: 31px;
+                    background-color: rgba(245,245,245,0.0);
+                    border: 1px solid rgba(222,222,222,0.6);
+                    cursor: pointer;
+                    &:hover{
+                        color: white;
+                        background-color: black;
+                        transition: 0.5s;
+                    }
+                    &::before{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+            }
+            
+            
+            &.content {//----------------блок основного контента-----------------//
+                margin-left: 60px;
+                max-width: 415px;
+                .content_title {//заголовок
+                    font-size: 24px;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
+                    color: #131313;
+                }
+                .content_categories {//категории
+                    &.categories {
+                        display: flex;
+                        margin-top: 21px;
+                        .categories_item {
+                            margin-left: 29px;
+                            font-size: 13px;
+                            font-weight: 300;
+                            letter-spacing: 0.01em;
+                            a{
+                                color: #006be5;
+                            }
+                            
+                            &:first-child{
+                                margin-left: 0px;
+                            }
+                        }
+                    }
+                    
+                }
+                
+                .content_price {//цена
+                    margin-top: 55px;
+                    &.price {
+                        display: flex;
+                        
+                        .price_old {
+                            text-decoration: line-through;
+                            font-size: 18px;
+                            font-weight: 400;
+                            letter-spacing: 0.05em;
+                            color: #bfbebe;
+                        }
+                        .price_actual {
+                            margin-left: 9px;
+                            font-size: 18px;
+                            font-weight: 700;
+                            letter-spacing: 0.05em;
+                            color: #9a9b9b;
+                           
+                        }
+                        .price_promocode {
+                            margin-left: 29px;
+                            font-size: 18px;
+                            font-weight: 700;
+                            letter-spacing: 0.05em;
+                            color: #131313;
+                            
+                            span{
+                                font-weight: 300;
+                                letter-spacing: 0.01em;
+                                font-size: 15px;
+                            }
+                            
+                        }
+                    }
+                   
+                }
+                
+                .content_info {//информацию по заказу(доставка,наличие)
+                    margin-top: 21px;
+                    &.info {
+                        width: 339px;
+                        height: 65px;
+                        background-color: #f4f4f4;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        .info_item {
+                        font-size: 13px;
+                        font-weight: 300;
+                        letter-spacing: 0.01em;
+                        color: #131313;
+                        margin-left: 35px;
+                        margin-top: 13px;
+                        position: relative;
+                        &:first-child{
+                            margin-top: 0px;
+                        }
+                        a{
+                            color: #006be5;    
+                        }
+                        
+                        &::before{
+                            position: absolute;
+                            left: -22px;
+                        }
+                        
+                        }
+                        
+                    }
+                    
+                }
+               
+                .content_btns {//кнопки взаимодействия клиента
+                    margin-top: 20px;
+                    &.btns {
+                        display: flex;
+                        .btns_item {
+                            &.shop {
+                                cursor: pointer;
+                                width: 165px;
+                                height: 40px;
+                                background-color: #006be5;   
+                                font-size: 13px;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                                letter-spacing: 0.05em;
+                                color: #ffffff;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                &:hover{
+                                    color: black;
+                                    background-color: #f4f4f4;
+                                    transition: 0.7s;
+                                    border: 2px solid #d9d9d9;
+                                }
+                            }
+                            &.favorite {
+                                cursor: pointer;
+                                margin-left: 23px;
+                                width: 165px;
+                                height: 40px;
+                                background-color: #ffffff;
+                                border: 2px solid #d9d9d9;
+                                font-size: 13px;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                                letter-spacing: 0.05em;
+                                color: #131313;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                &:hover{
+                                    color: white;
+                                    background-color: green;
+                                    transition: 0.7s;
+                                    border: none;
+                                }
+
+                            }
+                           
+                        }
+                    }
+                    
+                }
+
+                .content_counter{
+                    margin-top: 20px;
+                    width: 20%;
+                    &.counter {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: #9a9b9b solid 2px;
+                        .counter_elem {
+                            width: 33%;
+                            text-align: center;
+                            font-weight: bold;
+                            &.remove {
+                                cursor: pointer;
+                            }
+                            &.num {
+                                background-color: #b8c2c2;
+                            }
+                            &.add {
+                                cursor: pointer;
+                            }
+                        }
+                        
+                    }
+                }
+                
+                
+                .content_description {//описание товара
+                    margin-top: 42px;
+                    font-size: 13px;
+                    line-height: 18px;
+                    font-weight: 300;
+                    letter-spacing: 0.01em;
+                    color: #131313;
+
+                }
+
+
+                .content_contacts {//контакты
+                    margin-top: 45px;
+                    &.contacts {
+                        display: flex;
+                        align-items: center;
+                        .contacts_item {
+                            
+                            &.icon{
+                                cursor: pointer;
+                                margin-left: 10px;
+                                border-radius: 50%;
+                                width: 30px;
+                                height: 30px;
+                                background-color: #ffffff;
+                                border: 2px solid #d9d9d9;
+                                color: #d9d9d9 ;
+                                position: relative;
+                                &::before{//центруем иконки
+                                    position: absolute;               
+                                    top: 50%;                
+                                    left: 50%;         
+                                    transform: translate(-50%, -50%);
+                                    
+                                }
+                            }
+                            &.share {
+                            font-size: 13px;
+                            font-weight: 300;
+                            text-transform: uppercase;
+                            letter-spacing: 0.05em;
+                            color: #131313;
+                            }
+                            &.comment {
+                                margin-left: 11px;
+                                width: 45px;
+                                height: 30px;
+                                background-color: #efefef;
+                                position: relative;
+                                &::before{
+                                content: ''; 
+                                position: absolute; 
+                                border: 5px solid transparent; 
+                                border-top: 5px solid #efefef; 
+                                transform: rotate(90deg);
+                                top: 35%;
+                                left: -20%;
+                                
+                                }
+                                span{
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%);
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            
+            }
+            
+        }
+        
+    }
+    
+    //------------------------Модальное окно добавления в корзину------------------------------//
+    .modale-cart {
+        z-index: 5;
+        position: fixed;
+        width: 550px;
+        height: 100px;
+        top: -100%;
+        left: 50%;
+        transform: translate(-50%,0);
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px 1px gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        
+        .modale-cart_item {
+            margin-left: 15px;
+            
+            .modale-cart_title {
+                font-weight: bold;
+                color: #006be5;
+            }
+            .modale-cart_added {
+                margin-top: 6px;
+                text-align: center;
+                font-weight: 500;
+            }
+            
+        }
+        //кнопка закрытия
+        .modale-cart_close{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            &:hover{
+                color: red
+            }
+        }
+
+        .modale-cart_icon{
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            font-size: 20px;
+        }
+    
+    }
+    
+}

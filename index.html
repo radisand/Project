@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/icons-font.css"><!--Иконочный шрифт-->
+</head>
+<body>
+    <div class="wrapper">
+        <div class="mainblock">
+            <div class="mainblock_item slider">
+                <div class="slider_secondary secondary">
+                    <div data-img = "1" class="secondary_elem" style="background-image: url('assets/images/tshirt_green_1.jpeg');"></div>
+                    <div data-img = "2" class="secondary_elem" style="background-image: url('assets/images/tshirt_green_2.jpeg');"></div>
+                    <div data-img = "3" class="secondary_elem" style="background-image: url('assets/images/tshirt_green_3.jpeg');"></div>
+                </div>
+                <div class="slider_main" style="background-image: url('assets/images/tshirt_green_1.jpeg');"></div>
+                <div class="slider_control icon-chevron"></div>
+            </div>
+            <div class="mainblock_item content">
+                <h1 class="content_title" id ="name_supply">рубашка medicine</h1>
+                <div class="content_categories categories">
+                    <div class="categories_item"><a href="#">Рубашки Medicine</a></div>
+                    <div class="categories_item"><a href="#">Все модели Medicine</a></div>
+                    <div class="categories_item"><a href="#">Рубашки</a></div>
+                </div>
+                <div class="content_price price">
+                    <div class="price_old">2699</div>
+                    <div class="price_actual"><span id ="price_supply">2499</span> ₽</div>
+                    <div class="price_promocode">2227 ₽<span>- c промокодом</span></div>
+                </div>
+                <div class="content_info info">
+                    <div class="info_item icon-check">В наличии в магазине <a href="https://www.lamoda.ru/" target="_blank">Lamoda</a></div>
+                    <div class="info_item icon-car">Бесплатная доставка</div>
+                </div>
+                <div class="content_counter counter">
+                    <div class="counter_elem remove" id ="counter_remove">-</div>
+                    <div class="counter_elem num" id="total_num">0</div>
+                    <div class="counter_elem add" id ="counter_add">+</div>
+                </div>
+                <div class="content_btns btns">
+                    <div class="btns_item shop" id ="add-to-cart">Купить</div>
+                    <div class="btns_item favorite">в избранное</div>
+                </div>
+                <div class="content_description">
+                    <p>
+                        Рубашка Medicine выполнена из вискозной ткани с клетчатым узором. 
+                        Детали: прямой крой; отложной воротник; планка и манжеты на пуговицах; карман на груди.
+                    </p>
+                </div>
+                <div class="content_contacts contacts">
+                    <div class="contacts_item share">поделиться:</div>
+                    <div class="contacts_item icon icon-b"></div>
+                    <div class="contacts_item icon icon-google"></div>
+                    <div class="contacts_item icon icon-facebook"></div>
+                    <div class="contacts_item icon icon-twitter"></div>
+                    <div class="contacts_item comment"><span>123</span></div>
+                </div>
+            </div>
+        </div>
+        <!-- Модальное окно -->
+        <div class="modale-cart" id ="modale_cart">
+            <div class="modale-cart_item">
+                <div class="modale-cart_title">Название товара</div>
+                <div class="modale-cart_added" id ="cart_supply"></div>
+            </div>
+            <div class="modale-cart_item">
+                <div class="modale-cart_title">Цена за ед. ₽</div>
+                <div class="modale-cart_added" id="cart_price"></div>
+            </div>
+            <div class="modale-cart_item">
+                <div class="modale-cart_title">Кол-во</div>
+                <div class="modale-cart_added" id="cart_amount"></div>
+            </div>
+            <div class="modale-cart_item">
+                <div class="modale-cart_title">Общая стоимость ₽</div>
+                <div class="modale-cart_added" id="cart_summ"></div>
+            </div>
+            <span class="modale-cart_close">X</span>
+            <span class="modale-cart_icon icon-cart"></span>
+        </div>
+        
+    </div>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
